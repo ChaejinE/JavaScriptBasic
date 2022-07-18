@@ -29,3 +29,8 @@
 .show {
     display: block;
 }
+
+.dark {
+    background: black;
+    color: white;
+}

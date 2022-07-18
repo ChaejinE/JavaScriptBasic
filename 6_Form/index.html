@@ -11,7 +11,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="">
 
     <div class="black-bg">
         <div class="white-bg">
@@ -48,11 +48,29 @@
 
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-brand" href="#">Navbar</span>
+            <button class="badge bg-dark">Dark 🔄</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
       </nav>
+
+      <script>
+        var count = 1;
+
+        $('.badge').on('click', function() {
+            if (count == 1){
+                $('.badge').html('Light 🔄')
+                $('body').addClass("dark");
+            } else {
+                $('.badge').html('Dark 🔄')
+                $('body').removeClass("dark");
+            }
+
+            count ^= 1;
+        })
+
+      </script>
 
       <ul class="list-group">
         <li class="list-group-item">An item</li>
