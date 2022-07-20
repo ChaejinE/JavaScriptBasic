@@ -78,6 +78,7 @@
 
     <script>
         var pants = [28, 30, 32, 34];
+        var shirts = [95, 100, 105];
 
         $('.form-select').eq(0).on('input', function(e) {
             var value = this.value;
@@ -91,6 +92,12 @@
                 })
             }
         });
+
+        var obj = {name : 'kim', age : 20};
+
+        for (var key in obj) {
+          console.log(obj[key]);
+        }
     </script>
 
     <div class="container mt-5">
